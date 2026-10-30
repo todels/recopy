@@ -1,0 +1,113 @@
+/* Burst: shared pieces for every Burst post. Geometry comes from Figma (Burst Internal). */
+
+.burst {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: #111114;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+}
+.burst *, .burst *::before, .burst *::after { box-sizing: border-box; }
+.burst p { margin: 0; }
+.burst img { display: block; max-width: none; }
+
+.burst .abs { position: absolute; }
+.burst .fill { position: absolute; inset: 0; width: 100%; height: 100%; }
+.burst .overlay { mix-blend-mode: overlay; }
+/* Centred on (left, top) */
+.burst .at { position: absolute; transform: translate(-50%, -50%); }
+
+/* Soft glow ellipses along the bottom edge */
+.burst .glow { position: absolute; mix-blend-mode: overlay; opacity: .78; }
+.burst .glow > div { position: absolute; }
+.burst .glow img { width: 100%; height: 100%; }
+
+/* Big ring fans, flipped vertically like the source group */
+.burst .rings { position: absolute; transform: translate(-50%, -50%) scaleY(-1); }
+.burst .rings > img { width: 100%; height: 100%; }
+
+/* The pink card (svg with the logo notch) and its clip */
+.burst .card { position: absolute; overflow: hidden; }
+
+/* Floating avatars */
+.burst .float {
+  position: absolute;
+  left: calc(50% + var(--x));
+  top: calc(50% + var(--y));
+  width: var(--s);
+  height: var(--s);
+  transform: translate(-50%, -50%) rotate(var(--r));
+  border: var(--b) solid #fff;
+  border-radius: var(--rad);
+  opacity: .7;
+}
+.burst .float > img,
+.burst .float > .shade {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border-radius: var(--rad); object-fit: cover;
+}
+
+/* Blurry blob with eyes */
+.burst .blob {
+  position: absolute;
+  width: var(--s);
+  height: var(--s);
+  transform: scaleX(-1);
+  filter: blur(var(--blur));
+  border: var(--bw) solid #fff;
+  border-radius: 9999px;
+  background: #f9b1eb;
+  overflow: hidden;
+}
+.burst .blob > .eyes { position: absolute; }
+.burst .blob > .eyes > div { position: absolute; }
+.burst .blob > .eyes img { width: 100%; height: 100%; }
+.burst .blob > .shade { position: absolute; inset: 0; border-radius: inherit; }
+
+/* Profile card: dark rounded square, photo, name pill */
+.burst .pcard {
+  position: absolute;
+  width: var(--s);
+  height: var(--s);
+  transform: translate(-50%, -50%) rotate(var(--r));
+  border-radius: var(--rad);
+  background: #0f061b;
+}
+.burst .pcard > .photo {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + var(--dy));
+  width: var(--ps);
+  height: var(--ps);
+  transform: translate(-50%, -50%);
+  border: var(--pb) solid #fff;
+  border-radius: var(--prad);
+}
+.burst .pcard > .photo > img,
+.burst .pcard > .photo > .shade {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  border-radius: var(--prad); object-fit: cover;
+}
+.burst .pcard > .shade { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
+
+.burst .pill {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(1.78deg);
+  background: #0f061b;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+.burst .pill > .shade { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; }
+.burst .pill > p { position: relative; }
+
+/* Display type */
+.burst .ginto { font-family: "Ginto Nord Rounded", "ABC Ginto Nord Rounded Trial", sans-serif; }
+.burst .nowrap { white-space: nowrap; }
+
+/* Auto-fit wrapper: the app sets --fit so long copy shrinks instead of overflowing */
+.burst [data-fit]:not([data-fit-mode]) { transform: scale(var(--fit, 1)); }

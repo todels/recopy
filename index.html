@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recopy</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ff3fd7'/%3E%3Cpath d='M9 11h14M9 16h10M9 21h12' stroke='%23111114' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand"><span class="brand-mark"></span>Recopy</div>
+    <div class="crumbs"><span id="client-name"></span><span class="sep">/</span><span id="template-name"></span></div>
+    <div class="actions">
+      <span id="saved" class="saved">Saved</span>
+      <button id="reset" class="btn ghost" type="button">Reset</button>
+      <div class="split">
+        <button id="download" class="btn primary" type="button">Download PNG</button>
+        <select id="scale" class="btn primary" aria-label="Export size">
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav id="templates" class="templates" aria-label="Templates"></nav>
+
+    <section id="canvas" class="canvas">
+      <div id="frame" class="frame"><div id="stage" class="stage"></div></div>
+    </section>
+
+    <aside class="panel">
+      <h2>Copy</h2>
+      <div id="fields" class="fields"></div>
+      <h2 id="images-title">Images</h2>
+      <div id="images" class="images"></div>
+      <p class="hint">Tip: click any text on the post to type straight into it.</p>
+    </aside>
+  </main>
+
+  <input id="file" type="file" accept="image/*" hidden>
+  <script src="lib/html-to-image.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

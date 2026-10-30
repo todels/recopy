@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1000" height="1007" viewBox="0 0 1000 1007" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Subtract">
+<use xlink:href="#stroke0_877_21478" fill="white"/>
+<use xlink:href="#stroke0_877_21478" fill="url(#paint0_radial_877_21478)"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_877_21478" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(500 792) rotate(-90) scale(936.467 1182.41)">
+<stop stop-color="#FFA5FD"/>
+<stop offset="0.552202" stop-color="#FF45D9"/>
+<stop offset="1" stop-color="#B70092"/>
+</radialGradient>
+<path id="stroke0_877_21478" d="M923.2 0C950.083 0 963.524 -0.000229994 973.792 5.23145C982.824 9.83333 990.167 17.1764 994.769 26.208C1000 36.4757 1000 49.9174 1000 76.7998V842C1000 864.091 982.091 882 960 882H925C902.909 882 885 899.909 885 922V967C885 989.091 867.091 1007 845 1007H76.7998C49.9174 1007 36.4757 1007 26.208 1001.77C17.1764 997.167 9.83333 989.824 5.23145 980.792C-0.000229088 970.524 0 957.083 0 930.2V76.7998C0 49.9174 -0.000231034 36.4757 5.23145 26.208C9.83333 17.1764 17.1764 9.83333 26.208 5.23145C36.4757 -0.000229028 49.9174 0 76.7998 0H923.2Z"/>
+</defs>
+</svg>

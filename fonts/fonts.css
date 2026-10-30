@@ -1,0 +1,16 @@
+/* Fonts hosted with the tool. Add a family here, drop its woff2 next to it. */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("nunito/Nunito-VF.woff2") format("woff2");
+  font-weight: 200 1000;
+  font-display: block;
+}
+
+/* Private trial build: only the installed copy is used unless fonts/private/ is present. */
+@font-face {
+  font-family: "Ginto Nord Rounded";
+  src: local("ABC Ginto Nord Rounded Trial"), local("ABCGintoNordRoundedTrial-Bold");
+  font-weight: 700 900;
+  font-display: block;
+}
