@@ -7,10 +7,10 @@
   font-display: block;
 }
 
-/* Private trial build: only the installed copy is used unless fonts/private/ is present. */
+/* Rounded build of ABC Ginto Nord (trial), variable: wght 700-900, wdth 75-100. */
 @font-face {
   font-family: "Ginto Nord Rounded";
-  src: local("ABC Ginto Nord Rounded Trial"), local("ABCGintoNordRoundedTrial-Bold");
+  src: url("ginto/GintoNordRounded-VF.woff2") format("woff2"), local("ABC Ginto Nord Rounded Trial");
   font-weight: 700 900;
   font-display: block;
 }

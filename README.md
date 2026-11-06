@@ -31,4 +31,4 @@ python3 -m http.server 5214 --directory .
 `fonts/fonts.css` declares every family; files live next to it.
 
 - Nunito: OFL, hosted here (`fonts/nunito/`).
-- ABC Ginto Nord Rounded Trial: private trial build, not in this repo. The CSS uses the installed copy (`local()`), so it renders on machines that have it installed. Everyone else gets a fallback until a licensed file is added.
+- Ginto Nord Rounded: rounded build of ABC Ginto Nord (trial), hosted here (`fonts/ginto/`). Variable: weight 700-900, width 75-100.
